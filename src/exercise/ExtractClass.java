@@ -1,7 +1,6 @@
 package exercise;
 public class ExtractClass {
-// todo extract class TelephoneNumber from class Person
-	
+//extract class TelephoneNumber from class Person
 //DONE
 	class Person {
 	  private String name;
