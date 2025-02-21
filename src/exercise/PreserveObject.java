@@ -2,26 +2,16 @@ package exercise;
 
 public class PreserveObject {
 	class Room {
-		private int lowest, highest;
+		private TempRange tempRange;
 
 		public Room(int lowest, int highest) {
-			this.lowest = lowest;
-			this.highest = highest;
+			this.tempRange = new TempRange(lowest, highest);
 		}
 
-		// TODO: replace low & high in this withinPlan with preserve whole object
+		//replace low & high in this withinPlan with preserve whole object
+		//done
 		public boolean withinPlan(HeatingPlan plan) {
-			int low = getLowestTemp();
-			int high = getHighestTemp();
-			return plan.withinRange(low, high);
-		}
-
-		private int getHighestTemp() {
-			return highest;
-		}
-
-		private int getLowestTemp() {
-			return lowest;
+			return plan.withinRange(tempRange);
 		}
 
 	}
@@ -33,8 +23,8 @@ public class PreserveObject {
 			range = new TempRange(from, to);
 		}
 
-		public boolean withinRange(int low, int high) {
-			return (low >= range.getLow() && high <= range.getHigh());
+		public boolean withinRange(TempRange tempRange) {
+			return (tempRange.getLow() >= range.getLow() && tempRange.getHigh() <= range.getHigh());
 		}
 	}
 
