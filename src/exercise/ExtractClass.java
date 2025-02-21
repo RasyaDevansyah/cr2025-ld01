@@ -4,15 +4,21 @@ public class ExtractClass {
 //DONE
 	class Person {
 	  private String name;
-	  private TelephoneNumber telephoneNumber;
+	  private TelephoneNumber telephoneNumber = new TelephoneNumber();
 
 	  public String getName() {
 		return name;
 	  }
 
-	  public TelephoneNumber getTelephoneNumber() {
+	  public String getTelephoneNumber() {
+		  return telephoneNumber.getTelephoneNumber();
+	  }
+	  
+	  public TelephoneNumber getObjectTelephoneNumber() {
 		  return telephoneNumber;
 	  }
+	  
+	
 	  
 	}
 	
